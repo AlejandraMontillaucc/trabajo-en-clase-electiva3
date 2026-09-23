@@ -4,12 +4,44 @@
 
 <p>Me llamo {{ name }} y tengo {{ edad }} años , puedes contactarme al correo {{ email }}</p>
 
+<img src="{{ img1 }}" alt="Imagen 1" width="200">
+<img src="{{ img2 }}" alt="Imagen 2" width="200">
+
+
 <button (click)="onClick()">Click me</button>
 
 <button (click)="Suma()">Sumar Números</button>
 
-<img src="{{ img1 }}" alt="Imagen 1" width="200">
-<img src="{{ img2 }}" alt="Imagen 2" width="200">
+<p> Hola soy {{person.name}},
+    tengo {{person.age}} años
+    y mi correo es {{person.email}} </p>
+
+<p>El color es {{colores[0].name}}</p>
+
+
 
 <hr>
-<input type="text" [name]="nombreCampo" [placeholder]="placeholderCampo" (change)="recibirValor($event)">
+<input type="text"
+[name]="nombreCampo" 
+[placeholder]="placeholderCampo" 
+(change)="recibirValor($event)"
+(input)="onInputRecibirValor($event)"
+>
+
+<h1>Signals</h1>
+
+<h3>Nombre: {{mascota()}}</h3>
+
+<hr>
+<h1> Estructura de control </h1>
+
+<div class="user-card" *ngFor="let user of users; index as i" id={{i}}>
+  <img [src]="user.image" [alt]="user.name" class="user-avatar">
+  <h2 class="user-name"> {{user.name}} </h2>
+  <span class="user-position">{{user.position}}</span>
+  <span class="user-email">{{user.email}}</span>
+  <div class="user-status">
+    <span class="status-dot"></span>
+    Activo
+  </div>
+</div>

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-labs',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './labs.html',
   styleUrl: './labs.scss',
 })
@@ -13,10 +14,105 @@ export class Labs {
   email = "maria.montilladiaz@campusucc.edu.co";
   num1 = 20;
   num2 = 27;
-  img1 = "https://scontent-bog2-1.cdninstagram.com/v/t51.82787-15/548055551_17881448769388046_5522630009884486305_n.webp?_nc_cat=102&ig_cache_key=MzcxOTQ1NDExNDg3NjMwOTEzNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzM2LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=Co-ynsVo9Q8Q7kNvwHcjnvE&_nc_oc=Adr6WN_F2zqH4lJB5iX1StFHlGGXW7nZu4JR0zMkHR0VB-NsTrNSUJPvElKtySo4DpA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-bog2-1.cdninstagram.com&_nc_gid=-qsVcTcK9ePjsxf_WqjpDg&_nc_ss=7a22e&oh=00_AQKrpRazuZfmoHTCanjT9Q6TpLPCZ8y_Zmxe_3enHVTmoQ&oe=6A9E791C"
-  img2 = "https://scontent-bog2-2.cdninstagram.com/v/t51.82787-15/545475220_17881448787388046_4688208831497869328_n.webp?_nc_cat=110&ig_cache_key=MzcxOTQ1NDExNDg3NjMxMjA1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzA1LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=VO4a2JUjJR4Q7kNvwEZhgn3&_nc_oc=Ados-TFEFF7ceg2t12r6EH_M30I4Dg2Ir7rF7inp2X9yG9NpS3NLHMo9-gZ1MSENlBA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-bog2-2.cdninstagram.com&_nc_gid=-qsVcTcK9ePjsxf_WqjpDg&_nc_ss=7a22e&oh=00_AQIdverZNZ_Zq8Gd_KRA4HQJCIepJSsMZZ09XjqKe1LSPA&oe=6A9E5238"
+  img1 = "https://i.pinimg.com/736x/5d/d9/a5/5dd9a511419edabcba915ec06772d85a.jpg"
+  img2 = "https://i.pinimg.com/736x/80/81/c8/8081c8eb9daf1f3291eb2e2491b29236.jpg"
   
-  
+  person={
+    name: "Alejandra Montilla",
+    age: 23,
+    email: "maria.montilladiaz@campusucc.edu.co"
+  };
+
+  colores = [
+    {
+      name: "Rojo",
+      color: "red",
+    }
+  ];
+
+  mascota = signal('Perrito');
+
+   users = [
+    {
+      name: 'Juan Perez',
+      email: 'juan.perez@correo.com',
+      position: 'Administrador',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Maria Gomez',
+      email: 'maria.gomez@correo.com',
+      position: 'Desarrollador Frontend',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Carlos Ruiz',
+      email: 'carlos.ruiz@correo.com',
+      position: 'Desarrollador Backend',
+      isActive: false,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Ana Torres',
+      email: 'ana.torres@correo.com',
+      position: 'Diseñador UI/UX',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Luis Martinez',
+      email: 'luis.martinez@correo.com',
+      position: 'Analista de Datos',
+      isActive: false,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Sofia Ramirez',
+      email: 'sofia.ramirez@correo.com',
+      position: 'Gerente de Proyectos',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Jorge Herrera',
+      email: 'jorge.herrera@correo.com',
+      position: 'Especialista en Marketing',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Lucia Castro',
+      email: 'lucia.castro@correo.com',
+      position: 'Soporte Técnico',
+      isActive: false,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Miguel Vargas',
+      email: 'miguel.vargas@correo.com',
+      position: 'Control de Calidad (QA)',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'Elena Morales',
+      email: 'elena.morales@correo.com',
+      position: 'Recursos Humanos',
+      isActive: true,
+      image: 'https://placehold.co/100x100',
+    },
+    {
+      name: 'David Silva',
+      email: 'david.silva@correo.com',
+      position: 'DevOps Engineer',
+      isActive: false,
+      image: 'https://placehold.co/100x100',
+    },
+  ];
+
+
   onClick() {
     alert('¡Hola! Has hecho clic en el botón.');
   }
@@ -27,7 +123,19 @@ export class Labs {
   nombreCampo = "Ciudad";
   placeholderCampo = "Ingrese su ciudad de nacimiento";
 
-  recibirValor(event: any) {
-    console.log(event.target.value);
+  recibirValor(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const value = input.value;
+    console.log(value);
   }
+
+  onInputRecibirValor(event: Event) {
+    console.log((event.target as HTMLInputElement).value);
+
+    if ((event.target as HTMLInputElement).value === 'String') {
+      alert("la palabra String no es permitida");
+    }
+  }
+
+
 }
